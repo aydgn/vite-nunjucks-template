@@ -1,0 +1,10 @@
+{% extends "src/templates/layout.njk" %}
+
+{%- block content -%}
+    {% include "src/pages/home/hello.njk" %}
+    {%- if data -%}
+        Username: {{ data }}
+    {%- else -%}
+        Variable <code>username</code> is missing
+    {%- endif -%}
+{%- endblock -%}
